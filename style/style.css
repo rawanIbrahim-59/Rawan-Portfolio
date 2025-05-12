@@ -1270,10 +1270,10 @@ body[dir="ltr"] {
     visibility: hidden;
     opacity: 0;
     transform: translateX(100%);
-    display: none;
     top: 0;
     right: 0;
     z-index: 1000;
+    pointer-events: none;
     transition: opacity 1.3s ease, transform 1.3s ease;
 
 }
@@ -1281,19 +1281,19 @@ body[dir="ltr"] {
 .header.mobile .menu.visible {
     visibility: visible;
     opacity: 1;
-    display: block;
     transform: translateX(0);
+    pointer-events: auto;
 
 }
 
-/* .header.mobile .menu.hidden {
-    display: none;
-} */
+
 .header.mobile .menu.hidden {
     opacity: 0;
     visibility: hidden;
     transform: translateX(100%);
     transition: opacity 1.3s ease, transform 1.3s ease;
+    pointer-events: auto;
+
 }
 
 .header.mobile .menu .cancel {
