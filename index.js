@@ -33,8 +33,8 @@ typeEffect();
 document.addEventListener('DOMContentLoaded', () => {
     AOS.init({
         duration: 1500
-      });
-  });
+    });
+});
 //end use AOS
 
 //increase numbers
@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const containerHeight = visibleTimelineContainer.getBoundingClientRect().height;
         const windowHeight = window.innerHeight;
         const progress = Math.min(Math.max((windowHeight - containerTop) / containerHeight, 0), 1);
-        timelineLine.style.height = `${progress * 100}%`; 
+        timelineLine.style.height = `${progress * 100}%`;
     }
 
     document.addEventListener("scroll", handleScroll);
@@ -166,6 +166,15 @@ document.addEventListener('DOMContentLoaded', () => {
             body.classList.remove('fading');
         }, 600);
     });
+    // Hide menu on nav link click
+    const navLinks = document.querySelectorAll('.nav-mobile a');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            menu.classList.remove('visible');
+            menu.classList.add('hidden');
+        });
+    });
 });
 
 
@@ -175,23 +184,23 @@ document.addEventListener('scroll', () => {
     const bars = document.querySelectorAll('.bar');
     const sectionPosition = skillsSection.getBoundingClientRect().top;
     const screenPosition = window.innerHeight / 1.5;
-  
+
     if (sectionPosition < screenPosition) {
-      bars.forEach((bar) => {
-        const targetWidth = parseInt(bar.getAttribute('data-skill'), 10);
-        let currentWidth = 0;
-  
-        const increaseWidth = () => {
-          if (currentWidth < targetWidth) {
-            currentWidth += Math.ceil(targetWidth / 100);
-            bar.style.width = `${currentWidth}%`;
-            setTimeout(increaseWidth, 20);
-          } else {
-            bar.style.width = `${targetWidth}%`;
-          }
-        };
-        increaseWidth();
-      });
+        bars.forEach((bar) => {
+            const targetWidth = parseInt(bar.getAttribute('data-skill'), 10);
+            let currentWidth = 0;
+
+            const increaseWidth = () => {
+                if (currentWidth < targetWidth) {
+                    currentWidth += Math.ceil(targetWidth / 100);
+                    bar.style.width = `${currentWidth}%`;
+                    setTimeout(increaseWidth, 20);
+                } else {
+                    bar.style.width = `${targetWidth}%`;
+                }
+            };
+            increaseWidth();
+        });
     }
 });
 
@@ -200,12 +209,12 @@ var swiper = new Swiper(".mySwiper", {
     speed: 600,
     parallax: true,
     pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
+        el: ".swiper-pagination",
+        clickable: true,
     },
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
     },
 });
 
