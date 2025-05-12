@@ -1351,7 +1351,7 @@ body[dir="ltr"] {
 
 .skills-section .skills-buttons .btn {
     width: 130px;
-    height: 55px;
+    height: 60px;
     background-color: var(--change);
     font-size:1.35rem;
     color: var(--bg);
