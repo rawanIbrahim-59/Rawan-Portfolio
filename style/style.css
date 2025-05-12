@@ -1123,16 +1123,16 @@ body {
     z-index: 1;
 }
 .swiper-slide.slide1::before{
-    background-image: url(/images/drift.jpg);
+    background-image: url(./images/drift.jpg);
 }
 .swiper-slide.slide2::before{
-    background-image: url(/images/atm.png);
+    background-image: url(./images/atm.png);
 }
 .swiper-slide.slide3::before{
-    background-image: url(/images/almasraf);
+    background-image: url(./images/fitch.jpg);
 }
 .swiper-slide.slide4::before{
-    background-image: url(/images/gifis.png);
+    background-image: url(./images/gifis.png);
 }
 .swiper-slide {
     display: flex;
