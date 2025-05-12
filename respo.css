@@ -163,8 +163,14 @@
     .container {
         padding: 2rem 1rem;
     }
+    .contact-section{
+        margin-top: 5rem;
+    }
     .banner .img-banner img{
         width: 200px;
+    }
+    .swiper-backface-hidden .swiper-slide{
+        padding: 1rem;
     }
     .timeline-section .title .color-title {
         font-size: 1rem;
@@ -322,6 +328,7 @@
     }
     .swiper-slide .title{
         font-size: 20px;
+        margin-bottom: 1rem;
     }
     .swiper-slide .subtitle{
         font-size: 15px;
