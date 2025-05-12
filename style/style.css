@@ -1133,7 +1133,7 @@ body {
 }
 .swiper-slide.slide4::before{
     background-image: url(./images/gifis.png);
-}
+} 
 .swiper-slide {
     display: flex;
     position: relative;
