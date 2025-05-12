@@ -27,8 +27,8 @@ function typeEffect() {
     }
 }
 typeEffect();
-
 // end auto write
+
 // use AOS
 document.addEventListener('DOMContentLoaded', () => {
     AOS.init({
@@ -36,7 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   });
 //end use AOS
-
 
 //increase numbers
 document.querySelectorAll('.number').forEach((element) => {
@@ -102,12 +101,6 @@ document.addEventListener("DOMContentLoaded", function () {
     document.addEventListener("scroll", handleScroll);
 });
 
-
-
-
-
-
-
 const BUTTON = document.querySelector("button");
 const TOGGLE = () => {
     const IS_PRESSED = BUTTON.getAttribute("aria-pressed") === "true";
@@ -115,7 +108,6 @@ const TOGGLE = () => {
     BUTTON.setAttribute("aria-pressed", !IS_PRESSED);
 };
 BUTTON.addEventListener("click", TOGGLE);
-
 
 // Function to check if the section is in view
 function isElementInViewport(el) {
@@ -129,9 +121,7 @@ function isElementInViewport(el) {
 }
 
 
-
 //show menu mobile 
-
 document.addEventListener('DOMContentLoaded', () => {
     const menuIcon = document.querySelector('.menu-icon');
     const cancelBtn = document.querySelector('.cancel');
@@ -179,9 +169,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-
-
-
 //skills
 document.addEventListener('scroll', () => {
     const skillsSection = document.querySelector('.skills-section');
@@ -208,7 +195,7 @@ document.addEventListener('scroll', () => {
     }
 });
 
-
+//Swiper
 var swiper = new Swiper(".mySwiper", {
     speed: 600,
     parallax: true,
@@ -221,50 +208,4 @@ var swiper = new Swiper(".mySwiper", {
       prevEl: ".swiper-button-prev",
     },
 });
-console.log("Swiper initialized", swiper);
 
-//translate
-// Translation dictionary
-// document.getElementById("languageToggle").addEventListener("click", function () {
-//     const enTexts = document.querySelectorAll(".en");
-//     const arTexts = document.querySelectorAll(".ar");
-//     const toggleButton = document.getElementById("languageToggle");
-
-//     // Check the current language
-//     const isEnglish = enTexts[0].style.display !== "none";
-
-//     if (isEnglish) {
-//         // Switch to Arabic
-//         enTexts.forEach(el => el.style.display = "none");
-//         arTexts.forEach(el => el.style.display = "block");
-//         toggleButton.textContent = "English";
-//     } else {
-//         // Switch to English
-//         enTexts.forEach(el => el.style.display = "block");
-//         arTexts.forEach(el => el.style.display = "none");
-//         toggleButton.textContent = "Arabic";
-//     }
-// });
-// document.getElementById("languageToggle").addEventListener("click", function () {
-//     const enTexts = document.querySelectorAll(".en");
-//     const arTexts = document.querySelectorAll(".ar");
-//     const toggleButton = document.getElementById("languageToggle");
-//     const body = document.body; // Target the body or a parent element to set direction.
-
-//     // Check the current language
-//     const isEnglish = enTexts[0].style.display !== "none";
-
-//     if (isEnglish) {
-//         // Switch to Arabic
-//         enTexts.forEach(el => el.style.display = "none");
-//         arTexts.forEach(el => el.style.display = "block");
-//         toggleButton.textContent = "English";
-//         body.setAttribute("dir", "rtl"); // Change text direction to RTL
-//     } else {
-//         // Switch to English
-//         enTexts.forEach(el => el.style.display = "block");
-//         arTexts.forEach(el => el.style.display = "none");
-//         toggleButton.textContent = "Arabic";
-//         body.setAttribute("dir", "ltr"); // Change text direction to LTR
-//     }
-// });
