@@ -386,15 +386,20 @@
         padding-top: 3rem;
     }
 
-    .timeline {
-        height: 385px;
+    #volunteer .timeline {
+        height: 400px;
+    }
+    #study .timeline,#work .timeline{
+        height: 270px;
     }
 
     .timeline-item {
         width: 350px;
         padding: 0;
     }
-
+    #volunteer{
+        padding-top: 8rem;
+    }
     .timeline-content {
         padding: 0;
     }
