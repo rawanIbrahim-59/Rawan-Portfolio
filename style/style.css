@@ -132,7 +132,7 @@ body {
 
 .nav {
     display: flex;
-    gap: 1.3rem;
+    gap: 2.3rem;
 }
 
 .icons button {
@@ -435,7 +435,7 @@ body {
 
 
 .text .name {
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 700;
     color: var(--color);
 
@@ -468,13 +468,15 @@ body {
 }
 
 .text .des {
-    font-size: 1.9rem;
+    font-size: 1.4rem;
     font-weight: 500;
     color: var(--color);
 }
 
 
-
+.banner .img-banner img{
+    width: 280px;
+}
 .banner .img-banner svg {
     stroke: var(--color);
     /* fill: var(--color);  */
@@ -490,7 +492,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 6rem;
+    gap:15rem;
     height: fit-content;
     margin-top: 8rem;
     opacity: 1;
@@ -670,6 +672,7 @@ body {
 .project-section .h {
     padding-bottom: 4rem;
     position: relative;
+    height: 170px;
 }
 
 .contact-section .flex {
@@ -788,7 +791,7 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    height: 400px;
+    height:auto;
 }
 
 /* Top and Bottom Circles */
@@ -1110,15 +1113,27 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background-image: url(images/slide1.png);
+    /* height: 100%; */
+    height: 300px;
+    /* background-image: url(/images/slide1.png); */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    filter: blur(5px);
+    filter: blur(15px);
     z-index: 1;
 }
-
+.swiper-slide.slide1::before{
+    background-image: url(/images/drift.jpg);
+}
+.swiper-slide.slide2::before{
+    background-image: url(/images/atm.png);
+}
+.swiper-slide.slide3::before{
+    background-image: url(/images/almasraf);
+}
+.swiper-slide.slide4::before{
+    background-image: url(/images/gifis.png);
+}
 .swiper-slide {
     display: flex;
     position: relative;
@@ -1173,7 +1188,7 @@ body {
 
 .swiper-slide .title {
     font-size: 41px;
-    font-weight: 300;
+    font-weight: 600;
     color: white;
 }
 
@@ -1183,8 +1198,9 @@ body {
 }
 
 .swiper-slide .subtitle {
-    font-size: 21px;
+    font-size: 16px;
     color: white;
+    height: 88px;
 }
 
 .swiper-slide .text {
@@ -1196,12 +1212,16 @@ body {
 .swiper-wrapper {
     position: relative;
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
+    height: 300px;
     z-index: 1;
     display: flex;
     transition-property: transform;
     transition-timing-function: var(--swiper-wrapper-transition-timing-function, initial);
     box-sizing: content-box;
+}
+.swiper-slide{
+    height: 300px;
 }
 
 html .ar {
@@ -1256,7 +1276,7 @@ body[dir="ltr"] {
 }
 
 .header.mobile img {
-    right: 2rem;
+    right: 1rem;
     width: 60px;
     position: absolute;
     top: 1rem;

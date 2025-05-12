@@ -59,7 +59,9 @@
     .text .name .color {
         font-size: 2rem;
     }
-
+    .banner .img-banner img{
+        width: 250px;
+    }
     .text .name {
         font-size: 1.7rem;
         width: 300px;
@@ -161,7 +163,9 @@
     .container {
         padding: 2rem 1rem;
     }
-
+    .banner .img-banner img{
+        width: 200px;
+    }
     .timeline-section .title .color-title {
         font-size: 1rem;
     }
@@ -243,7 +247,11 @@
     .sta-section .numbers {
         gap: 2.3rem;
         flex-direction: column;
+        padding-top: 3rem;
 
+    }
+    .skills-section h1{
+        padding-bottom: 3rem;
     }
 
     .timeline-section .buttons .btn .type {
