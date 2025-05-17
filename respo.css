@@ -2,6 +2,12 @@
     .header.mobile{
         display: none;
     }
+    .timeline-section.mobile-lime-line{
+        display: none;
+    }
+    .timeline-section.desktop{
+        display: block;
+    }
 } 
 @media(max-width:1200px){
 
@@ -186,7 +192,9 @@
         width: 300px;
         text-align: center;
     }
-
+    .timeline-section.mobile-lime-line{
+        display: block;
+    }
     .banner {
         margin-top: 1rem;
         gap: 1.5rem;
@@ -218,7 +226,9 @@
     .banner .buttons {
         justify-content: center;
     }
-
+    .timeline-section.desktop{
+        display: none;
+    }
     .banner .text .social-icon {
         justify-content: center;
         align-items: center;

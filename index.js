@@ -218,3 +218,29 @@ var swiper = new Swiper(".mySwiper", {
     },
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll(".btn");
+    const sections = document.querySelectorAll(".timeline_container");
+
+    buttons.forEach(button => {
+        button.addEventListener("click", () => {
+            // Remove 'active' class from all buttons
+            buttons.forEach(btn => btn.classList.remove("active"));
+
+            // Add 'active' class to the clicked button
+            button.classList.add("active");
+
+            // Get the section to show from data-section attribute
+            const targetSectionId = button.getAttribute("data-section");
+
+            // Show the corresponding section and hide the others
+            sections.forEach(section => {
+                if (section.id === targetSectionId) {
+                    section.style.display = "block";
+                } else {
+                    section.style.display = "none";
+                }
+            });
+        });
+    });
+});

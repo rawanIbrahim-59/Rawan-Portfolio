@@ -1134,6 +1134,9 @@ body {
 .swiper-slide.slide4::before{
     background-image: url(./images/gifis.png);
 } 
+.swiper-slide.slide5::before{
+    background-image: url(./images/lego.webp);
+} 
 .swiper-slide {
     display: flex;
     position: relative;
@@ -1382,4 +1385,27 @@ body[dir="ltr"] {
     align-items: center;
     justify-content: center;
     font-weight: 700;
+}
+.timeMobile-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* padding: 2rem; */
+    gap: 0.4rem;
+}
+.timeMobile{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2rem;
+}
+.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled,
+.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled,
+.swiper-button-next, .swiper-rtl .swiper-button-prev,.swiper-button-prev, .swiper-rtl .swiper-button-next,
+.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled{
+    display: none !important;
 }
