@@ -100,25 +100,46 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.addEventListener("scroll", handleScroll);
 });
+//dark mode
+// const BUTTON = document.querySelector("button");
+// const TOGGLE = () => {
+//     const IS_PRESSED = BUTTON.getAttribute("aria-pressed") === "true";
+//     document.body.setAttribute("data-dark-mode", !IS_PRESSED);
+//     BUTTON.setAttribute("aria-pressed", !IS_PRESSED);
+// };
+// BUTTON.addEventListener("click", TOGGLE);
 
+// // Function to check if the section is in view
+// function isElementInViewport(el) {
+//     const rect = el.getBoundingClientRect();
+//     return (
+//         rect.top >= 0 &&
+//         rect.left >= 0 &&
+//         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+//         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+//     );
+// }
 const BUTTON = document.querySelector("button");
+
+// Function to toggle dark mode and save preference
 const TOGGLE = () => {
     const IS_PRESSED = BUTTON.getAttribute("aria-pressed") === "true";
-    document.body.setAttribute("data-dark-mode", !IS_PRESSED);
-    BUTTON.setAttribute("aria-pressed", !IS_PRESSED);
-};
-BUTTON.addEventListener("click", TOGGLE);
+    const NEW_MODE = !IS_PRESSED;
 
-// Function to check if the section is in view
-function isElementInViewport(el) {
-    const rect = el.getBoundingClientRect();
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-}
+    document.body.setAttribute("data-dark-mode", NEW_MODE);
+    BUTTON.setAttribute("aria-pressed", NEW_MODE);
+    localStorage.setItem("darkMode", NEW_MODE); // Save preference
+};
+
+// Load preference on page load
+window.addEventListener("DOMContentLoaded", () => {
+    const SAVED_MODE = localStorage.getItem("darkMode") === "true";
+
+    document.body.setAttribute("data-dark-mode", SAVED_MODE);
+    BUTTON.setAttribute("aria-pressed", SAVED_MODE);
+});
+
+BUTTON.addEventListener("click", TOGGLE);
 
 
 //show menu mobile 
