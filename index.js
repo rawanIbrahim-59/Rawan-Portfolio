@@ -244,26 +244,35 @@ var swiper = new Swiper(".mySwiper", {
 //         });
 //     });
 // });
-
+//time line for mobile
 document.addEventListener("DOMContentLoaded", function () {
     const buttons = document.querySelectorAll(".btn");
     const sections = document.querySelectorAll(".timeline_container.mob-time");
 
     buttons.forEach(button => {
         button.addEventListener("click", () => {
-            // Remove 'active' class from all buttons
             buttons.forEach(btn => btn.classList.remove("active"));
-
-            // Add 'active' class to the clicked button
             button.classList.add("active");
-
-            // Get the section to show from data-section attribute
             const targetSectionId = button.getAttribute("data-section");
-
-            // Show the corresponding section and hide the others
             sections.forEach(section => {
                 section.style.display = section.id === targetSectionId ? "block" : "none";
             });
         });
     });
 });
+
+
+
+//welcome section befor loard
+window.addEventListener('load', function () {
+    const welcome = document.getElementById('welcome-screen');
+    const mainContent = document.getElementById('main-content');
+
+    setTimeout(() => {
+      welcome.classList.add('hide');
+      setTimeout(() => {
+        welcome.style.display = 'none';
+        mainContent.style.display = 'block';
+      }, 1000);
+    }, 2000);
+  });
