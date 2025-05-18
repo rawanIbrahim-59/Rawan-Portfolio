@@ -189,8 +189,12 @@
 
     .text .name {
         font-size: 1.7rem;
-        width: 300px;
+        width: 100%;
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
     .timeline-section.mobile-lime-line{
         display: block;
@@ -365,6 +369,13 @@
     #desktop{
         display: none;
     }
+    .project-section .h .two{
+        font-size: 1rem;
+    }
+    .project-section .h{
+        padding-bottom: 3rem;
+        height: 100px;
+    }
 
 
 }
@@ -407,9 +418,7 @@
         width: 350px;
         padding: 0;
     }
-    #volunteer{
-        padding-top: 8rem;
-    }
+
     .timeline-content {
         padding: 0;
     }
