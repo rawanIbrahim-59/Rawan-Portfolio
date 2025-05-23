@@ -48,6 +48,8 @@ html {
     --bg: hsl(219, 30%, 12%);
     --color: hsl(219 30% 98%);
     color-scheme: dark only;
+    transition:  0.5s ease;
+
 }
 
 /* .dark-mode {
@@ -1547,12 +1549,12 @@ body[dir="ltr"] {
     font-weight: 900;
     color: var(--color);
 }
-
+/* 
 .skills .title.flex div:last-child {
     color: var(--change);
     font-size: 16px;
     font-weight: 900;
-}
+} */
 
 .skill h3 {
     margin-bottom: 5px;

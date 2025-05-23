@@ -349,7 +349,9 @@
     .header.mobile{
         display: block;
     }
-    .contact-section .h .two{
+    .contact-section .h .two,
+    .timeline-section .title .color-title, 
+    .skills.skills-section .content .title.flex .color-title {
         font-size: 1rem;
     }
     .footer .flex{
