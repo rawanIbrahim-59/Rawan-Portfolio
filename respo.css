@@ -179,6 +179,7 @@
     .container {
         padding: 2rem 1rem;
     }
+   
     .header.desktop .icons button{
         width: 60px;
     }
@@ -402,6 +403,9 @@
     #welcome-screen .img-welcome{
         width: 300px;
     }
+    #volunteer .timeline {
+        height: 500px !important;
+    }
 
 
 }
@@ -434,7 +438,7 @@
     }
 
     #volunteer .timeline {
-        height: 500px;
+        height: 500px !important;
     }
     #study .timeline,#work .timeline{
         height: 200px;
