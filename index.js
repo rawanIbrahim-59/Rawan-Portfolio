@@ -101,64 +101,35 @@ document.addEventListener("DOMContentLoaded", function () {
     document.addEventListener("scroll", handleScroll);
 });
 //dark mode
-// const BUTTON = document.querySelector("button");
-// const TOGGLE = () => {
-//     const IS_PRESSED = BUTTON.getAttribute("aria-pressed") === "true";
-//     document.body.setAttribute("data-dark-mode", !IS_PRESSED);
-//     BUTTON.setAttribute("aria-pressed", !IS_PRESSED);
-// };
-// BUTTON.addEventListener("click", TOGGLE);
+document.addEventListener("DOMContentLoaded", () => {
+    const TOGGLE_BUTTONS = document.querySelectorAll(".toggle");
 
-// // Function to check if the section is in view
-// function isElementInViewport(el) {
-//     const rect = el.getBoundingClientRect();
-//     return (
-//         rect.top >= 0 &&
-//         rect.left >= 0 &&
-//         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-//         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-//     );
-// }
-const BUTTON = document.querySelector("button");
-
-// Function to toggle dark mode and save preference
-const TOGGLE = () => {
-    const IS_PRESSED = BUTTON.getAttribute("aria-pressed") === "true";
-    const NEW_MODE = !IS_PRESSED;
-
-    document.body.setAttribute("data-dark-mode", NEW_MODE);
-    BUTTON.setAttribute("aria-pressed", NEW_MODE);
-    localStorage.setItem("darkMode", NEW_MODE); // Save preference
-};
-
-// Load preference on page load
-window.addEventListener("DOMContentLoaded", () => {
+    // Load preference
     const SAVED_MODE = localStorage.getItem("darkMode") === "true";
-
     document.body.setAttribute("data-dark-mode", SAVED_MODE);
-    BUTTON.setAttribute("aria-pressed", SAVED_MODE);
+
+    TOGGLE_BUTTONS.forEach(button => {
+        button.setAttribute("aria-pressed", SAVED_MODE);
+
+        // Attach click event to each toggle button
+        button.addEventListener("click", () => {
+            const IS_PRESSED = button.getAttribute("aria-pressed") === "true";
+            const NEW_MODE = !IS_PRESSED;
+
+            document.body.setAttribute("data-dark-mode", NEW_MODE);
+            localStorage.setItem("darkMode", NEW_MODE);
+
+            // Update all toggle buttons to reflect the new mode
+            TOGGLE_BUTTONS.forEach(btn => btn.setAttribute("aria-pressed", NEW_MODE));
+        });
+    });
 });
-
-BUTTON.addEventListener("click", TOGGLE);
-
-
 //show menu mobile 
+
 document.addEventListener('DOMContentLoaded', () => {
     const menuIcon = document.querySelector('.menu-icon');
     const cancelBtn = document.querySelector('.cancel');
     const menu = document.querySelector('.menu');
-    const darkToggle = document.querySelector('.dark');
-    const statusSpan = document.querySelector('.status');
-    const body = document.body;
-
-    // 🔁 Check and apply saved dark mode setting
-    const savedMode = localStorage.getItem('darkMode');
-    if (savedMode === 'true') {
-        body.classList.add('dark-mode');
-        statusSpan.textContent = '(On)';
-    } else {
-        statusSpan.textContent = '(Off)';
-    }
 
     // Show menu
     menuIcon.addEventListener('click', () => {
@@ -172,21 +143,6 @@ document.addEventListener('DOMContentLoaded', () => {
         menu.classList.add('hidden');
     });
 
-    // Toggle Dark Mode
-    darkToggle.addEventListener('click', () => {
-        body.classList.add('fading');
-
-        setTimeout(() => {
-            body.classList.toggle('dark-mode');
-            const isDark = body.classList.contains('dark-mode');
-            localStorage.setItem('darkMode', isDark); // 💾 Save preference
-            statusSpan.textContent = isDark ? '(On)' : '(Off)';
-        }, 100);
-
-        setTimeout(() => {
-            body.classList.remove('fading');
-        }, 600);
-    });
     // Hide menu on nav link click
     const navLinks = document.querySelectorAll('.nav-mobile a');
 
@@ -239,32 +195,6 @@ var swiper = new Swiper(".mySwiper", {
     },
 });
 
-// document.addEventListener("DOMContentLoaded", function () {
-//     const buttons = document.querySelectorAll(".btn");
-//     const sections = document.querySelectorAll(".timeline_container.mob-time");
-
-//     buttons.forEach(button => {
-//         button.addEventListener("click", () => {
-//             // Remove 'active' class from all buttons
-//             buttons.forEach(btn => btn.classList.remove("active"));
-
-//             // Add 'active' class to the clicked button
-//             button.classList.add("active");
-
-//             // Get the section to show from data-section attribute
-//             const targetSectionId = button.getAttribute("data-section");
-
-//             // Show the corresponding section and hide the others
-//             sections.forEach(section => {
-//                 if (section.id === targetSectionId) {
-//                     section.style.display = "block";
-//                 } else {
-//                     section.style.display = "none";
-//                 }
-//             });
-//         });
-//     });
-// });
 //time line for mobile
 document.addEventListener("DOMContentLoaded", function () {
     const buttons = document.querySelectorAll(".btn");
@@ -283,17 +213,35 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-
-//welcome section befor loard
-window.addEventListener('load', function () {
-    const welcome = document.getElementById('welcome-screen');
-    const mainContent = document.getElementById('main-content');
-
-    setTimeout(() => {
-      welcome.classList.add('hide');
-      setTimeout(() => {
-        welcome.style.display = 'none';
-        mainContent.style.display = 'block';
-      }, 1000);
-    }, 2000);
+document.querySelectorAll('.title_type_skill').forEach(title => {
+    title.addEventListener('click', () => {
+        title.classList.toggle('active');
+        const rows = title.nextElementSibling;
+        const arrow = title.querySelector('.second svg');
+        if (arrow) arrow.classList.toggle('rotate');
+        rows.classList.toggle('open');
+  
+        // Only trigger animation if the rows are opening
+        if (rows.classList.contains('open')) {
+            const skillBars = rows.querySelectorAll('.skill-progress');
+            skillBars.forEach(bar => {
+                const skillLevel = bar.getAttribute('data-skill');
+                bar.style.width = skillLevel;
+  
+                const rateSpan = bar.nextElementSibling;
+                let percent = 0;
+                const target = parseInt(skillLevel);
+  
+                // Animate skill percentage
+                const interval = setInterval(() => {
+                    if (percent >= target) {
+                        clearInterval(interval);
+                    } else {
+                        percent++;
+                        rateSpan.textContent = percent + '%';
+                    }
+                }, 10); 
+            });
+        }
+    });
   });
