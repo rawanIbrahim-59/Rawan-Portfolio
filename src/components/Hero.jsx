@@ -7,7 +7,7 @@ useEffect(() => {
   const badge = badgeRef.current;
   if (!badge) return;
 
-  const text = 'Full-Stack Developer & Creative Technologist';
+  const text = 'Frontend-focused Full-Stack Developer';
 
   badge.textContent = '';
 
@@ -41,7 +41,7 @@ useEffect(() => {
             border: '1px solid rgba(108,99,255,0.3)',
           }}
         >
-          Full-Stack Developer &amp; Creative Technologist
+          Frontend-focused Full-Stack Developer
         </span>
 
         <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight leading-tight mb-5 animate-[fadeInUp_0.6s_ease_0.1s_both]">
@@ -50,7 +50,7 @@ useEffect(() => {
         </h1>
 
         <p className="text-base sm:text-lg md:text-xl text-[#8888bb] mb-8 max-w-[550px] mx-auto animate-[fadeInUp_0.6s_ease_0.2s_both]">
-          I craft performant full-stack web applications. 3+ years of turning complex
+          Frontend-focused Full-Stack Developer with 3+ years of turning complex
           problems into elegant, user-centered digital experiences.
           <span className="inline-block ml-0.5 animate-blink text-primary text-lg font-thin">|</span>
         </p>

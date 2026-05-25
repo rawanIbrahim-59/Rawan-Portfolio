@@ -205,7 +205,6 @@ function ProjectCard({ project, index }) {
     </div>
   );
 }
-
 export default function Projects() {
   const [filter, setFilter] = useState("all");
   const [leaving, setLeaving] = useState(false);

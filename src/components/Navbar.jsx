@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 
 const links = [
   { href: '#hero', label: 'Home' },
+  { href: '#about', label: 'About' },
   // { href: '#stats', label: 'Stats' },
 
   { href: '#experience', label: 'Work Experience' },
@@ -56,7 +57,7 @@ export default function Navbar({ theme, toggleTheme }) {
       }}
     >
       <div className="text-3xl font-extrabold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent select-none">
-        RI
+        R a w a n
       </div>
 
       <ul className="hidden md:flex gap-8 list-none">

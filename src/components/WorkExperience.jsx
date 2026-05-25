@@ -1,7 +1,7 @@
 const experience = [
   {
     icon: 'fas fa-briefcase',
-    company: 'Aratech (Information Technology)',
+    company: 'aratech',
     location: 'UAE, Dubai (Remote)',
     role: 'Web Developer',
     period: 'Jun 2024 — Present',

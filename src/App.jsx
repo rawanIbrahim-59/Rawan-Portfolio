@@ -3,6 +3,7 @@ import useTheme from './hooks/useTheme';
 import StarsCanvas from './components/StarsCanvas';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import About from './components/About';
 import Stats from './components/Stats';
 import WorkExperience from './components/WorkExperience';
 import Education from './components/Education';
@@ -157,6 +158,7 @@ export default function App() {
 
       <Navbar theme={theme} toggleTheme={toggleTheme} />
       <Hero />
+      <About />
       {/* <Stats /> */}
       <WorkExperience />
       <Education />
