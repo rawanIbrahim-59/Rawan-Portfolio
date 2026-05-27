@@ -50,7 +50,7 @@ useEffect(() => {
         </h1>
 
         <p className="text-base sm:text-lg md:text-xl text-[#8888bb] mb-8 max-w-[550px] mx-auto animate-[fadeInUp_0.6s_ease_0.2s_both]">
-          Frontend-focused Full-Stack Developer with 3+ years of turning complex
+          Frontend-focused Full-Stack Developer with 4+ years of turning complex
           problems into elegant, user-centered digital experiences.
           <span className="inline-block ml-0.5 animate-blink text-primary text-lg font-thin">|</span>
         </p>
