@@ -4,7 +4,7 @@ export default function About() {
       <h2 className="section-title">About Me</h2>
       <div className="max-w-[800px] mx-auto text-center">
         <p className="text-base sm:text-lg leading-relaxed mb-4">
-          With 3+ years of professional experience building modern, scalable web
+          With 4+ years of professional experience building modern, scalable web
           applications through freelance work and collaborations with various
           companies.
         </p>
