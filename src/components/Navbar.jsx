@@ -57,7 +57,7 @@ export default function Navbar({ theme, toggleTheme }) {
       }}
     >
       <div className="text-3xl font-extrabold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent select-none">
-        R a w a n
+        RI
       </div>
 
       <ul className="hidden md:flex gap-8 list-none">
