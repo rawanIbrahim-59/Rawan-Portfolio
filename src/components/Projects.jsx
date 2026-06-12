@@ -93,26 +93,26 @@ const projects = [
       },
     ],
   },
-  {
-    category: "more",
-    gradient: "linear-gradient(135deg, #ffecd2, #fcb69f)",
-    icon: "fas fa-language",
-    title: "Learn-German",
-    desc: "An educational website for learning German built with CSS, JS, and HTML.",
-    tags: ["HTML", "CSS", "JavaScript"],
-    links: [
-      {
-        href: "https://github.com/rawanIbrahim-59/Learn-German",
-        icon: "fab fa-github",
-        label: "Code",
-      },
-      {
-        href: "https://learn-german-vert.vercel.app/",
-        icon: "fas fa-external-link-alt",
-        label: "Live",
-      },
-    ],
-  },
+  // {
+  //   category: "more",
+  //   gradient: "linear-gradient(135deg, #ffecd2, #fcb69f)",
+  //   icon: "fas fa-language",
+  //   title: "Learn-German",
+  //   desc: "An educational website for learning German built with CSS, JS, and HTML.",
+  //   tags: ["HTML", "CSS", "JavaScript"],
+  //   links: [
+  //     {
+  //       href: "https://github.com/rawanIbrahim-59/Learn-German",
+  //       icon: "fab fa-github",
+  //       label: "Code",
+  //     },
+  //     {
+  //       href: "https://learn-german-vert.vercel.app/",
+  //       icon: "fas fa-external-link-alt",
+  //       label: "Live",
+  //     },
+  //   ],
+  // },
   {
     category: "more",
     gradient: "linear-gradient(135deg, #ffecd2, #fcb69f)",
